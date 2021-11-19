@@ -57,7 +57,10 @@ namespace Cainos.PixelArtTopDown_Basic
             dir.Normalize();
             animator.SetBool("IsMoving", dir.magnitude > 0);
 
-            GetComponent<Rigidbody2D>().velocity = speed * dir;
+            if (!FadePanel.instance.Fading)
+                GetComponent<Rigidbody2D>().velocity = speed * dir;
+            else
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
     }
 }

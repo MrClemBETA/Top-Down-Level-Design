@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cainos.PixelArtTopDown_Basic;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,11 +9,10 @@ public class EnterTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(triggerName);
         if(PlayerData.instance.EnterTriggerLocation == triggerName)
         {
-            Debug.Log("This has been reached.");
             PlayerData.instance.gameObject.transform.position = transform.position;
+            CameraFollow.instance.QuickAdjust();
         }
     }
 

@@ -22,8 +22,14 @@ public class SceneTransition : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            PlayerData.instance.EnterTriggerLocation = levelTransition;
-            SceneManager.LoadScene(levelTransition);
+            StartCoroutine(TransitionScene());
         }
+    }
+
+    private IEnumerator TransitionScene()
+    {
+        yield return new WaitForSeconds(FadePanel.instance.FadeOut());
+        PlayerData.instance.EnterTriggerLocation = levelTransition;
+        SceneManager.LoadScene(levelTransition);
     }
 }

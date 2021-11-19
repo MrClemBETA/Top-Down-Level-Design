@@ -69,6 +69,7 @@
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
     <Compile Include="Assets\Scripts\EnterTrigger.cs" />
+    <Compile Include="Assets\Scripts\FadePanel.cs" />
     <Compile Include="Assets\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Changelog.txt" />
